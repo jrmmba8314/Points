@@ -6,6 +6,7 @@ A project for the Fetch Rewards Coding Exercise - Backend Software Engineering.
 Executable apps are provided for Windows, Mac, and Linux. These can found under the subdirectory **/exec** .
 Run apps as you normally would launch on your operating system, usually by double clicking on the file. 
 Java does not have to be installed on your computer. The necessary Java runtime files are bundled with the app.
+The webservice is set to run locally on port 2022.
 
 Alternatively, the webservice is being hosted on AWS at https://jrmmba.com/points.
 
@@ -26,7 +27,9 @@ project to execute the test.
 
 ## Documentation
 ### Swagger
-Swagger documentation for the API is available at https://jrmmba.com/points/swagger
+Swagger documentation for the API is available at https://jrmmba.com/points/swagger-ui.html .
+For this project I am using just the default Swagger documentation. Each item in the Swagger 
+documentation can be customized.
 
 ### Javadocs
 Javadocs documentation for the application code is available at https://jrmmba.com/points/javadocs
@@ -55,3 +58,9 @@ a simple configuration change can switch between H2 and full feature database su
 ### Audit fields
 Although the requirements for the application did not specifically mention audit fields, I decided to include them.
 Any time a database table is created, at the minimum audit fields should be included for a professional application.
+
+### Model fields
+I purposely made my model fields all lowercase. Any variable that will end up as a database column
+I like to keep all lowercase. Spring does a nice job of converting fields to columns if the field is all
+lowercase. Ways exist to work around this issue, but I have allows felt the additional configuration, annotations,
+and coding needed was not worth the gain. I just use lowercase and move on.

@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "f042d983-2b3a-47a1-b320-ef20f4d42ba8",
+		"name": "Points",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:2022/points/earn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"payer\": \"DANNON\", \"points\": 1000, \"timestamp\": \"2020-11-02T14:00:00Z\" } ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2022/points/earn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2022",
+					"path": [
+						"points",
+						"earn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:2022/points/earn Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"payer\": \"UNILEVER\", \"points\": 200, \"timestamp\": \"2020-10-31T11:00:00Z\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2022/points/earn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2022",
+					"path": [
+						"points",
+						"earn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:2022/points/earn Copy 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"payer\": \"DANNON\", \"points\": -200, \"timestamp\": \"2020-10-31T15:00:00Z\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2022/points/earn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2022",
+					"path": [
+						"points",
+						"earn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:2022/points/earn Copy 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"payer\": \"MILLER COORS\", \"points\": 10000, \"timestamp\": \"2020-11-01T14:00:00Z\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2022/points/earn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2022",
+					"path": [
+						"points",
+						"earn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:2022/points/earn Copy 4",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"payer\": \"DANNON\", \"points\": 300, \"timestamp\": \"2020-10-31T10:00:00Z\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2022/points/earn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2022",
+					"path": [
+						"points",
+						"earn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:2022/points/transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2022/points/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2022",
+					"path": [
+						"points",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
