@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"local.jrmmba.points"},{"l":"local.jrmmba.points.config"},{"l":"local.jrmmba.points.controllers"},{"l":"local.jrmmba.points.exceptions"},{"l":"local.jrmmba.points.handlers"},{"l":"local.jrmmba.points.models"},{"l":"local.jrmmba.points.repositories"},{"l":"local.jrmmba.points.services"}]
