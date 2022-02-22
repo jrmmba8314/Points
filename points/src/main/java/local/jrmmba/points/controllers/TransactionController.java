@@ -16,7 +16,7 @@ import java.util.List;
  * The entry point for clients to access transaction data
  */
 @RestController
-@RequestMapping("/points")
+@RequestMapping
 public class TransactionController
 {
     @Autowired
