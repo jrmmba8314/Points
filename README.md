@@ -17,13 +17,13 @@ A Postman collection is included that can be used to access and manipulate the d
 against the AWS implementation.
 
 A quick reference for the endpoints:
-- GET [http://localhost:2022/points/transactions]() or [http://jrmmba.com/points/transactions]() 
+- GET [http://localhost:2022/points/transactions](http://localhost:2022/points/transactions) or [http://jrmmba.com/points/transactions](http://jrmmba.com/points/transactions) 
   - returns all transaction
-- POST [http://localhost:2022/points/earn]() or [http://jrmmba.com/points/earn]() 
+- POST [http://localhost:2022/points/earn](http://localhost:2022/points/earn) or [http://jrmmba.com/points/earn](http://jrmmba.com/points/earn) 
   - adds a transaction
-- POST [http://localhost:2022/points/spend]() or [http://jrmmba.com//points/spend]()
+- POST [http://localhost:2022/points/spend](http://localhost:2022/points/spend) or [http://jrmmba.com//points/spend](http://jrmmba.com//points/spend)
   - reward points being spent are recorded
-- GET [http://localhost:2022/points/balance]() or [http://jrmmba.com/points/balance]() 
+- GET [http://localhost:2022/points/balance](http://localhost:2022/points/balance) or [http://jrmmba.com/points/balance](http://jrmmba.com/points/balance) 
   - current balance by payer
 
 More detailed documentation can be found using the Swagger documentation mentioned below. Note that using HTTP instead 
@@ -41,12 +41,12 @@ as a unit.
 
 ## Documentation
 ### Swagger
-Swagger documentation for the API is available at [http://jrmmba.com/points/swagger-ui.html]() .
+Swagger documentation for the API is available at [http://jrmmba.com/points/swagger-ui.html](http://jrmmba.com/points/swagger-ui.html) .
 For this project I am using just the default Swagger documentation. Each item in the Swagger 
 documentation can be customized.
 
 ### Javadocs
-Javadocs documentation for the application code is available at [https://jrmmba.com/points/javadocs]()
+Javadocs documentation for the application code is available at [https://jrmmba8314.github.io/Points/](https://jrmmba8314.github.io/Points/)
 
 ## Notes on implementation
 The application is written using Java 11 with the Spring Framework and Spring Boot.

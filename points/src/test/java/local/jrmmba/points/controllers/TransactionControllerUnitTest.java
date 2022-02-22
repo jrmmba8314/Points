@@ -95,7 +95,7 @@ public class TransactionControllerUnitTest
     @Test
     public void listAllTransactions() throws Exception
     {
-        String apiUrl = "/points/transactions";
+        String apiUrl = "/transactions";
         Mockito.when(transactionService.findAll())
                 .thenReturn(transactionList);
 
@@ -112,7 +112,7 @@ public class TransactionControllerUnitTest
     @Test
     public void addNewTransaction() throws Exception
     {
-        String apiUrl = "/points/earn";
+        String apiUrl = "/earn";
         Transaction newTransaction = new Transaction("TEST", 100, LocalDateTime.now());
         String transactionString = "{ \"payer\": \"TEST\", \"points\": 100, \"timestamp\": \"2020-11-02T14:00:00Z\" }";
 
@@ -134,7 +134,7 @@ public class TransactionControllerUnitTest
     {
         List<ReportSpends> rtnSpendReport = new ArrayList<>();
         rtnSpendReport.add(new ReportSpends("TEST", 100));
-        String apiUrl = "/points/spend";
+        String apiUrl = "/spend";
         Mockito.when(spendService.spend(any(Spend.class)))
                 .thenReturn(rtnSpendReport);
 
@@ -156,7 +156,7 @@ public class TransactionControllerUnitTest
     {
         LinkedHashMap<String, Integer> rtnBalanceList = new LinkedHashMap<>();
         rtnBalanceList.put("TEST", 100);
-        String apiUrl = "/points/balance";
+        String apiUrl = "/balance";
         Mockito.when(transactionService.getBalances())
                 .thenReturn(rtnBalanceList);
 

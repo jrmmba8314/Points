@@ -14,12 +14,6 @@ public class SwaggerWebMVC
 {
     /**
      * Adds the Swagger web pages to Spring.
-     * This still gives the following warning
-     * <p>
-     * No mapping for GET /
-     * No mapping for GET /csrf
-     * <p>
-     * All works though
      *
      * @param registry the place that holds the web pages for Spring
      */
