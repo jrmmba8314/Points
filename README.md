@@ -21,7 +21,7 @@ A quick reference for the endpoints:
   - returns all transaction
 - POST [http://localhost:2022/points/earn](http://localhost:2022/points/earn) or [http://jrmmba.com/points/earn](http://jrmmba.com/points/earn) 
   - adds a transaction
-- POST [http://localhost:2022/points/spend](http://localhost:2022/points/spend) or [http://jrmmba.com//points/spend](http://jrmmba.com/points/spend)
+- POST [http://localhost:2022/points/spend](http://localhost:2022/points/spend) or [http://jrmmba.com/points/spend](http://jrmmba.com/points/spend)
   - reward points being spent are recorded
 - GET [http://localhost:2022/points/balance](http://localhost:2022/points/balance) or [http://jrmmba.com/points/balance](http://jrmmba.com/points/balance) 
   - current balance by payer
