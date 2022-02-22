@@ -46,7 +46,7 @@ For this project I am using just the default Swagger documentation. Each item in
 documentation can be customized.
 
 ### Javadocs
-Javadocs documentation for the application code is available at [https://jrmmba8314.github.io/Points/](https://jrmmba8314.github.io/Points/)
+Javadocs documentation for the application code is available at [https://jrmmba8314.github.io/Points/docs/](https://jrmmba8314.github.io/Points/docs/)
 
 ## Notes on implementation
 The application is written using Java 11 with the Spring Framework and Spring Boot.
