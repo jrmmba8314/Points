@@ -5,7 +5,7 @@ A project for the Fetch Rewards Coding Exercise - Backend Software Engineering.
 ## Executing Webservice
 An executable jar file is provided. It is are located under the subdirectory **/exec** . To run the application use the command
 <br>**java -jar points.jar**
-
+<br>
 A windows executable file is also provided under the same subdirectory. You can double-click on **points.exe** to run that webservice on Windows.
 <br>Note that Java version 11 or higher must be installed on your machine.
 
@@ -41,7 +41,7 @@ as a unit.
 
 ## Documentation
 ### Swagger
-Swagger documentation for the API is available at [https://jrmmba.com/points/swagger-ui.html]() .
+Swagger documentation for the API is available at [http://jrmmba.com/points/swagger-ui.html]() .
 For this project I am using just the default Swagger documentation. Each item in the Swagger 
 documentation can be customized.
 

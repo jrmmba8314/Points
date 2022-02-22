@@ -12,6 +12,8 @@ public interface TransactionService
 {
     /**
      * Returns a list of all transactions
+     *
+     * @return List of all transactions sorted by timestamp, earliest first
      */
     List<Transaction> findAll();
 

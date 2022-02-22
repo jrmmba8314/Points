@@ -8,6 +8,7 @@ import local.jrmmba.points.repositories.TransactionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -16,6 +17,7 @@ import java.util.List;
  * Implements the SpendService interface
  */
 @Service(value = "spendService")
+@Transactional
 public class SpendServiceImpl
         implements SpendService
 {
@@ -23,6 +25,7 @@ public class SpendServiceImpl
     private TransactionRepository transactionRepo;
 
     @Override
+    @Transactional
     public List<ReportSpends> spend(Spend spend)
     {
         int sumRemainingPoints = transactionRepo.sumRemainingPoints();

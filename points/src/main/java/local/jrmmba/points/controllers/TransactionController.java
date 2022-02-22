@@ -66,7 +66,7 @@ public class TransactionController
      * <br> Example: <a href="http://localhost:2022/points/spend">http://localhost:2022/points/spend</a>
      *
      * @param newSpend the amount of points to spend
-     * @return
+     * @return List of payer and how much they were charged this transaction
      * @see SpendService#spend(Spend)  SpendService.spend(Spend)
      */
     @PostMapping(value = "/spend",

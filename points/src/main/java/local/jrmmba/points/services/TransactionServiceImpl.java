@@ -6,6 +6,7 @@ import local.jrmmba.points.repositories.TransactionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.LinkedHashMap;
 import java.util.List;
 
@@ -13,6 +14,7 @@ import java.util.List;
  * Implements the transaction service interface
  */
 @Service(value = "transactionService")
+@Transactional
 public class TransactionServiceImpl
         implements TransactionService
 {
@@ -26,6 +28,7 @@ public class TransactionServiceImpl
     }
 
     @Override
+    @Transactional
     public Transaction save(Transaction transaction)
     {
         if (transaction.getTransactionId() > 0)

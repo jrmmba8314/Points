@@ -1,0 +1,8 @@
+local.jrmmba.points
+local.jrmmba.points.config
+local.jrmmba.points.controllers
+local.jrmmba.points.exceptions
+local.jrmmba.points.handlers
+local.jrmmba.points.models
+local.jrmmba.points.repositories
+local.jrmmba.points.services
