@@ -1,6 +1,8 @@
 package local.jrmmba.points.controllers;
 
+import local.jrmmba.points.models.Spend;
 import local.jrmmba.points.models.Transaction;
+import local.jrmmba.points.services.SpendService;
 import local.jrmmba.points.services.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,6 +21,9 @@ public class TransactionController
 {
     @Autowired
     private TransactionService transactionService;
+
+    @Autowired
+    private SpendService spendService;
 
     /**
      * Returns a list of all transactions
@@ -42,7 +47,7 @@ public class TransactionController
      *
      * @param newTransaction the data to create the new transaction
      * @return a status of created (201)
-     * @see TransactionService#save(Transaction) TransactionService.save(Transaction
+     * @see TransactionService#save(Transaction) TransactionService.save(Transaction)
      */
     @PostMapping(value = "/earn",
             consumes = {"application/json"},
@@ -54,5 +59,39 @@ public class TransactionController
     {
         transactionService.save(newTransaction);
         return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+
+    /**
+     * Spends the given amount of point
+     * <br> Example: <a href="http://localhost:2022/points/spend">http://localhost:2022/points/spend</a>
+     *
+     * @param newSpend the amount of points to spend
+     * @return
+     * @see SpendService#spend(Spend)  SpendService.spend(Spend)
+     */
+    @PostMapping(value = "/spend",
+            consumes = {"application/json"},
+            produces = {"application/json"})
+    public ResponseEntity<?> addExpenditure(
+            @Valid
+            @RequestBody
+                    Spend newSpend)
+    {
+        return new ResponseEntity<>(spendService.spend(newSpend), HttpStatus.OK);
+    }
+
+    /**
+     * Returns a list of payers with their remaining points balance
+     * <br>Example: <a href="http://localhost:2022/points/balance">http://localhost:2022/points/balance</a>
+     *
+     * @return the list of payers with their remaining points balance
+     * @see TransactionService#getBalances()  TransactionService.getBalances()
+     */
+    @GetMapping(value = "/balance",
+            produces = {"application/json"})
+    public ResponseEntity<?> getCurrentBalanceOfPayers()
+    {
+        return new ResponseEntity<>(transactionService.getBalances(),
+                HttpStatus.OK);
     }
 }

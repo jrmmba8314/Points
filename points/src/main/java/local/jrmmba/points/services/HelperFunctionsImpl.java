@@ -13,10 +13,6 @@ import java.util.List;
 public class HelperFunctionsImpl
         implements HelperFunctions
 {
-    /**
-     * A public field used to store data from another API. This will have to be populated each time the application is run.
-     * Population is done manually for each country code using an endpoint.
-     */
     public List<ValidationError> getConstraintViolation(Throwable cause)
     {
         // Find any data violations that might be associated with the error and report them

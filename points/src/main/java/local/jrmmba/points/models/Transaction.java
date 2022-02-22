@@ -1,15 +1,14 @@
 package local.jrmmba.points.models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Date;
 
 /**
- * The entity allowing interactions with the Transaction table
+ * The entity defining and allowing interactions with the Transaction table
  */
 @Entity
 @Table(name = "transactions")
@@ -35,10 +34,22 @@ public class Transaction
     private int points;
 
     /**
+     * The remaining points (int) that can be spent for this transaction.
+     * <p>
+     * This is a calculated field and as such violates one of the tenets of good relational database design.
+     * However, recalculating this value during each expenditure would degrade performance over time. So, the violation
+     * of a design tenet is worth the performance savings.
+     * <p>
+     * Note that if editing of transaction amounts is ever allowed, this field will become invalid!
+     */
+    private int remainingpoints;
+
+    /**
      * The date and time of the transaction
      */
     @NotNull
     @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'")
     private LocalDateTime timestamp;
 
     /**
@@ -52,6 +63,7 @@ public class Transaction
     {
         this.payer = payer;
         this.points = points;
+        this.remainingpoints = points;
         this.timestamp = timestamp;
     }
 
@@ -121,6 +133,26 @@ public class Transaction
     public void setPoints(int points)
     {
         this.points = points;
+    }
+
+    /**
+     * Getter for the remaining points of this transaction
+     *
+     * @return the remaining points
+     */
+    public int getRemainingpoints()
+    {
+        return remainingpoints;
+    }
+
+    /**
+     * Setter for the remaining points of this transaction
+     *
+     * @param remainingpoints the new amount for remaining points
+     */
+    public void setRemainingpoints(int remainingpoints)
+    {
+        this.remainingpoints = remainingpoints;
     }
 
     /**

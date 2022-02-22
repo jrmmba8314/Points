@@ -16,6 +16,7 @@
     <description>Fetch Rewards Coding Exercise - Backend Software Engineering</description>
     <properties>
         <java.version>11</java.version>
+        <start-class>local.jrmmba.points.PointsApplication</start-class>
     </properties>
     <dependencies>
         <dependency>
@@ -83,6 +84,10 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>${start-class}</mainClass>
+                    <layout>ZIP</layout>
+                </configuration>
             </plugin>
         </plugins>
     </build>
