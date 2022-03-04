@@ -10,20 +10,20 @@ A windows executable file is also provided under the same subdirectory. You can 
 <br>Note that Java version 11 or higher must be installed on your machine.
 
 
-Alternatively, the webservice is being hosted on AWS at https://jrmmba.com/points.
+Alternatively, the webservice is being hosted on AWS at https://fetchrewards.jrmmba.com/points.
 
 ## Using the webservice
 A Postman collection is included that can be used to access and manipulate the data. The Postman collection is set to run
 against the AWS implementation.
 
 A quick reference for the endpoints:
-- GET [http://localhost:2022/points/transactions](http://localhost:2022/points/transactions) or [http://jrmmba.com/points/transactions](http://jrmmba.com/points/transactions) 
+- GET [http://localhost:2022/points/transactions](http://localhost:2022/points/transactions) or [http://fetchrewards.jrmmba.com/points/transactions](http://fetchrewards.jrmmba.com/points/transactions) 
   - returns all transaction
-- POST [http://localhost:2022/points/earn](http://localhost:2022/points/earn) or [http://jrmmba.com/points/earn](http://jrmmba.com/points/earn) 
+- POST [http://localhost:2022/points/earn](http://localhost:2022/points/earn) or [http://fetchrewards.jrmmba.com/points/earn](http://fetchrewards.jrmmba.com/points/earn) 
   - adds a transaction
-- POST [http://localhost:2022/points/spend](http://localhost:2022/points/spend) or [http://jrmmba.com/points/spend](http://jrmmba.com/points/spend)
+- POST [http://localhost:2022/points/spend](http://localhost:2022/points/spend) or [http://fetchrewards.jrmmba.com/points/spend](http://fetchrewards.jrmmba.com/points/spend)
   - reward points being spent are recorded
-- GET [http://localhost:2022/points/balance](http://localhost:2022/points/balance) or [http://jrmmba.com/points/balance](http://jrmmba.com/points/balance) 
+- GET [http://localhost:2022/points/balance](http://localhost:2022/points/balance) or [http://fetchrewards.jrmmba.com/points/balance](http://fetchrewards.jrmmba.com/points/balance) 
   - current balance by payer
 
 More detailed documentation can be found using the Swagger documentation mentioned below. Note that using HTTP instead 
@@ -41,7 +41,7 @@ as a unit.
 
 ## Documentation
 ### Swagger
-Swagger documentation for the API is available at [http://jrmmba.com/points/swagger-ui.html](http://jrmmba.com/points/swagger-ui.html) .
+Swagger documentation for the API is available at [http://fetchrewards.jrmmba.com/points/swagger-ui.html](http://fetchrewards.jrmmba.com/points/swagger-ui.html) .
 For this project I am using just the default Swagger documentation. Each item in the Swagger 
 documentation can be customized.
 
